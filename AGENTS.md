@@ -7,7 +7,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 This is a personal Claude Code agent skills distribution repo, installable via:
 
 ```bash
-npx skills add rockiestar/mike-skills
+npx skills add MikeChongCan/mike-skills
 ```
 
 ## Skill format
@@ -25,9 +25,7 @@ The description field is the most important — it's what Claude uses to auto-in
 
 ## Repo layout
 
-Currently a single-skill repo: `SKILL.md` at root = the `png-optimize` skill.
-
-To add more skills, nest each under `skills/<name>/SKILL.md` — `npx skills` discovers both root-level and subdirectory skills automatically.
+Skills live under `skills/<name>/SKILL.md`. Add a new skill by creating a new subdirectory there.
 
 Optional subdirectories per skill:
 - `references/` — reference docs Claude may read during the skill

@@ -5,13 +5,13 @@ Mike's personal collection of [Claude Code](https://claude.ai/code) agent skills
 ## Install
 
 ```bash
-npx skills add rockiestar/mike-skills
+npx skills add MikeChongCan/mike-skills
 ```
 
 Or install a specific skill by name:
 
 ```bash
-npx skills add rockiestar/mike-skills --skill png-optimize
+npx skills add MikeChongCan/mike-skills --skill png-optimize
 ```
 
 Skills are installed into `.claude/skills/` in your project (or `~/.claude/skills/` globally).
@@ -29,25 +29,15 @@ Optimize and minimize PNG files for smaller file sizes using `oxipng` and `pngqu
 ## Structure
 
 ```
-SKILL.md          # Active skill (root = single-skill install)
+skills/
+  png-optimize/
+    SKILL.md
 AGENTS.md         # Repo instructions for AI agents (CLAUDE.md symlinks here)
 CLAUDE.md         # Symlink → AGENTS.md
 README.md
 ```
 
-## Adding more skills
-
-To distribute multiple skills from one repo, move each into a named subdirectory:
-
-```
-skills/
-  png-optimize/
-    SKILL.md
-  another-skill/
-    SKILL.md
-```
-
-`npx skills` discovers skills at root or under `skills/`.
+Add more skills by creating new subdirectories under `skills/`.
 
 ## References
 
