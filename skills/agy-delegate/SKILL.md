@@ -46,7 +46,7 @@ Claude Opus 4.6 (Thinking)
 GPT-OSS 120B (Medium)
 ```
 
-Default is typically Gemini 3.5 Flash. For complex implementation, prefer `Claude Sonnet 4.6 (Thinking)` or `Claude Opus 4.6 (Thinking)`.
+Default to `Gemini 3.5 Flash (High)` — fast, capable, and cost-effective for most implementation tasks. Only escalate to `Claude Opus 4.6 (Thinking)` for exceptionally complex architectural work.
 
 ## Delegation patterns
 
@@ -76,6 +76,10 @@ Split rules:
 ### With model override
 
 ```bash
+# Default — recommended for most tasks
+agy --dangerously-skip-permissions --model "Gemini 3.5 Flash (High)" --prompt "Read the plan at docs/auth-refactor.plan.md and implement it completely."
+
+# Heavy lifting — complex architecture only
 agy --dangerously-skip-permissions --model "Claude Opus 4.6 (Thinking)" --prompt "Read the plan at docs/auth-refactor.plan.md and implement it completely."
 ```
 
